@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct TheMoveApp: App {
+    @EnvironmentObject private var vm: EventsViewModel
+    @EnvironmentObject private var cityVm: CitiesViewModel
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomePageView()
+                .environmentObject(CitiesViewModel())
+                .environmentObject(EventsViewModel())
+
         }
     }
 }

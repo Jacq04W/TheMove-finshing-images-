@@ -7,20 +7,25 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TrapDoorView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            NavigationLink(destination: NoReturnView()) {
+                Text("Tap to fall into the trap door 🚪")
+            }
         }
-        .padding()
     }
 }
 
+struct NoReturnView: View { 
+    var body: some View {
+        Text("Ha! You cannot return.")
+            .navigationBarBackButtonHidden(true)
+    }
+}
+     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TrapDoorView()
     }
 }

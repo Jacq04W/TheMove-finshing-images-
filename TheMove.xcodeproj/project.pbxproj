@@ -7,18 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0911AFDE29C42D8200C18209 /* BuyingTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0911AFDD29C42D8200C18209 /* BuyingTicket.swift */; };
+		092B76CE29D5410000425FF3 /* LinkCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B76CD29D5410000425FF3 /* LinkCards.swift */; };
+		0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A43F29BF24B900A6E609 /* HomePageView.swift */; };
+		0946A44229BF26E400A6E609 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A44129BF26E400A6E609 /* EventListView.swift */; };
+		09529D3E29C62E850050FEFB /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09529D3D29C62E850050FEFB /* TabView.swift */; };
+		096F428629C1299A00E54D77 /* ChangeCityButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096F428529C1299A00E54D77 /* ChangeCityButton.swift */; };
+		0970016429CBCD600005DAAE /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970016329CBCD600005DAAE /* PaymentButton.swift */; };
+		0970016629CBCDCA0005DAAE /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0970016529CBCDCA0005DAAE /* PaymentHandler.swift */; };
+		09747ABF29BF835500DBE184 /* TicketDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747ABE29BF835500DBE184 /* TicketDataServices.swift */; };
+		09747AC129BF84B400DBE184 /* TicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747AC029BF84B400DBE184 /* TicketsViewModel.swift */; };
+		098B6DC029D60BA50018DE5F /* MainTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B6DBF29D60BA50018DE5F /* MainTabViews.swift */; };
 		09B621F829BBB35C00ECFF5D /* TheMoveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B621F729BBB35C00ECFF5D /* TheMoveApp.swift */; };
 		09B621FA29BBB35C00ECFF5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B621F929BBB35C00ECFF5D /* ContentView.swift */; };
 		09B621FC29BBB35E00ECFF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B621FB29BBB35E00ECFF5D /* Assets.xcassets */; };
 		09B621FF29BBB35E00ECFF5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B621FE29BBB35E00ECFF5D /* Preview Assets.xcassets */; };
+		09B6220629BBB37600ECFF5D /* EmptyTickets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6220529BBB37600ECFF5D /* EmptyTickets.swift */; };
+		09B6220829BBCF6600ECFF5D /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6220729BBCF6600ECFF5D /* TicketModel.swift */; };
+		09B6220A29BBD18700ECFF5D /* VipTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6220929BBD18700ECFF5D /* VipTicket.swift */; };
+		09BFA4D129C407E80079B3BC /* OfficialTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D029C407E80079B3BC /* OfficialTicket.swift */; };
+		09BFA4D329C418160079B3BC /* MyTickets .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D229C418160079B3BC /* MyTickets .swift */; };
+		09BFA4D529C41A040079B3BC /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D429C41A040079B3BC /* CartButton.swift */; };
+		09BFA4D729C4208B0079B3BC /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D629C4208B0079B3BC /* TicketRow.swift */; };
+		09F28BC929BF0B2800EE0671 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BC829BF0B2800EE0671 /* Event.swift */; };
+		09F28BCC29BF0BB700EE0671 /* EventsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BCB29BF0BB700EE0671 /* EventsDataService.swift */; };
+		09F28BCF29BF1F8F00EE0671 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BCE29BF1F8F00EE0671 /* ViewModel.swift */; };
+		09F9FC4C29BFC1A600E9033E /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4B29BFC1A600E9033E /* CityList.swift */; };
+		09F9FC4E29BFFCA300E9033E /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4D29BFFCA300E9033E /* CityModel.swift */; };
+		09F9FC5029BFFE4A00E9033E /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4F29BFFE4A00E9033E /* CityData.swift */; };
+		09F9FC5229C0007200E9033E /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC5129C0007200E9033E /* CityViewModel.swift */; };
+		09FAB73B29D4869E006C1556 /* ProfilePage .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAB73A29D4869E006C1556 /* ProfilePage .swift */; };
+		09FFC78129C25841009D3FC0 /* LocationMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFC78029C25841009D3FC0 /* LocationMapPin.swift */; };
+		09FFC78329C25BC5009D3FC0 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFC78229C25BC5009D3FC0 /* EventDetailView.swift */; };
+		09FFC78529C25FA4009D3FC0 /* EventPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FFC78429C25FA4009D3FC0 /* EventPreviewCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0911AFDD29C42D8200C18209 /* BuyingTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyingTicket.swift; sourceTree = "<group>"; };
+		092B76CD29D5410000425FF3 /* LinkCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCards.swift; sourceTree = "<group>"; };
+		0946A43F29BF24B900A6E609 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
+		0946A44129BF26E400A6E609 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		09529D3D29C62E850050FEFB /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		096F428529C1299A00E54D77 /* ChangeCityButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCityButton.swift; sourceTree = "<group>"; };
+		0970016329CBCD600005DAAE /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		0970016529CBCDCA0005DAAE /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		09747ABE29BF835500DBE184 /* TicketDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataServices.swift; sourceTree = "<group>"; };
+		09747AC029BF84B400DBE184 /* TicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewModel.swift; sourceTree = "<group>"; };
+		098B6DBF29D60BA50018DE5F /* MainTabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViews.swift; sourceTree = "<group>"; };
 		09B621F429BBB35C00ECFF5D /* TheMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B621F729BBB35C00ECFF5D /* TheMoveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMoveApp.swift; sourceTree = "<group>"; };
 		09B621F929BBB35C00ECFF5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09B621FB29BBB35E00ECFF5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09B621FE29BBB35E00ECFF5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		09B6220529BBB37600ECFF5D /* EmptyTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTickets.swift; sourceTree = "<group>"; };
+		09B6220729BBCF6600ECFF5D /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		09B6220929BBD18700ECFF5D /* VipTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipTicket.swift; sourceTree = "<group>"; };
+		09BFA4D029C407E80079B3BC /* OfficialTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialTicket.swift; sourceTree = "<group>"; };
+		09BFA4D229C418160079B3BC /* MyTickets .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTickets .swift"; sourceTree = "<group>"; };
+		09BFA4D429C41A040079B3BC /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		09BFA4D629C4208B0079B3BC /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
+		09F28BC829BF0B2800EE0671 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		09F28BCB29BF0BB700EE0671 /* EventsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataService.swift; sourceTree = "<group>"; };
+		09F28BCE29BF1F8F00EE0671 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		09F9FC4B29BFC1A600E9033E /* CityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
+		09F9FC4D29BFFCA300E9033E /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		09F9FC4F29BFFE4A00E9033E /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
+		09F9FC5129C0007200E9033E /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
+		09FAB73A29D4869E006C1556 /* ProfilePage .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfilePage .swift"; sourceTree = "<group>"; };
+		09FFC78029C25841009D3FC0 /* LocationMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapPin.swift; sourceTree = "<group>"; };
+		09FFC78229C25BC5009D3FC0 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		09FFC78429C25FA4009D3FC0 /* EventPreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPreviewCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +90,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0911AFDF29C4451400C18209 /* CityCreator */ = {
+			isa = PBXGroup;
+			children = (
+				0911AFE029C4453200C18209 /* Mvvm */,
+				0911AFE129C4453D00C18209 /* Views */,
+			);
+			path = CityCreator;
+			sourceTree = "<group>";
+		};
+		0911AFE029C4453200C18209 /* Mvvm */ = {
+			isa = PBXGroup;
+			children = (
+				09F9FC5129C0007200E9033E /* CityViewModel.swift */,
+				09F9FC4F29BFFE4A00E9033E /* CityData.swift */,
+				09F9FC4D29BFFCA300E9033E /* CityModel.swift */,
+			);
+			path = Mvvm;
+			sourceTree = "<group>";
+		};
+		0911AFE129C4453D00C18209 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				096F428529C1299A00E54D77 /* ChangeCityButton.swift */,
+				09F9FC4B29BFC1A600E9033E /* CityList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0911AFE229C4461B00C18209 /* Event Creator */ = {
+			isa = PBXGroup;
+			children = (
+				09F28BCD29BF1F4900EE0671 /* Mvvm */,
+				09F28BD229BF21BF00EE0671 /* Views */,
+			);
+			path = "Event Creator";
+			sourceTree = "<group>";
+		};
+		0970712929C4276C00C391E8 /* Ticket Creator */ = {
+			isa = PBXGroup;
+			children = (
+				0911AFDD29C42D8200C18209 /* BuyingTicket.swift */,
+				0970712B29C4282A00C391E8 /* MVVM */,
+				0970712A29C427B500C391E8 /* VViews */,
+			);
+			path = "Ticket Creator";
+			sourceTree = "<group>";
+		};
+		0970712A29C427B500C391E8 /* VViews */ = {
+			isa = PBXGroup;
+			children = (
+				09BFA4D229C418160079B3BC /* MyTickets .swift */,
+				09BFA4D629C4208B0079B3BC /* TicketRow.swift */,
+				09B6220929BBD18700ECFF5D /* VipTicket.swift */,
+				09BFA4D029C407E80079B3BC /* OfficialTicket.swift */,
+				09BFA4D429C41A040079B3BC /* CartButton.swift */,
+				09B6220529BBB37600ECFF5D /* EmptyTickets.swift */,
+			);
+			path = VViews;
+			sourceTree = "<group>";
+		};
+		0970712B29C4282A00C391E8 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				09747AC029BF84B400DBE184 /* TicketsViewModel.swift */,
+				09747ABE29BF835500DBE184 /* TicketDataServices.swift */,
+				09B6220729BBCF6600ECFF5D /* TicketModel.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
 		09B621EB29BBB35C00ECFF5D = {
 			isa = PBXGroup;
 			children = (
+				092B76CD29D5410000425FF3 /* LinkCards.swift */,
+				0970016329CBCD600005DAAE /* PaymentButton.swift */,
+				0970016529CBCDCA0005DAAE /* PaymentHandler.swift */,
+				09529D3D29C62E850050FEFB /* TabView.swift */,
+				0911AFE229C4461B00C18209 /* Event Creator */,
+				0970712929C4276C00C391E8 /* Ticket Creator */,
+				0911AFDF29C4451400C18209 /* CityCreator */,
 				09B621F629BBB35C00ECFF5D /* TheMove */,
 				09B621F529BBB35C00ECFF5D /* Products */,
 			);
@@ -65,6 +200,30 @@
 				09B621FE29BBB35E00ECFF5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09F28BCD29BF1F4900EE0671 /* Mvvm */ = {
+			isa = PBXGroup;
+			children = (
+				09F28BCE29BF1F8F00EE0671 /* ViewModel.swift */,
+				09F28BCB29BF0BB700EE0671 /* EventsDataService.swift */,
+				09F28BC829BF0B2800EE0671 /* Event.swift */,
+			);
+			path = Mvvm;
+			sourceTree = "<group>";
+		};
+		09F28BD229BF21BF00EE0671 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0946A43F29BF24B900A6E609 /* HomePageView.swift */,
+				09FAB73A29D4869E006C1556 /* ProfilePage .swift */,
+				09FFC78229C25BC5009D3FC0 /* EventDetailView.swift */,
+				098B6DBF29D60BA50018DE5F /* MainTabViews.swift */,
+				09FFC78029C25841009D3FC0 /* LocationMapPin.swift */,
+				09FFC78429C25FA4009D3FC0 /* EventPreviewCard.swift */,
+				0946A44129BF26E400A6E609 /* EventListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +296,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FAB73B29D4869E006C1556 /* ProfilePage .swift in Sources */,
+				0970016429CBCD600005DAAE /* PaymentButton.swift in Sources */,
+				09BFA4D329C418160079B3BC /* MyTickets .swift in Sources */,
+				09747AC129BF84B400DBE184 /* TicketsViewModel.swift in Sources */,
+				0970016629CBCDCA0005DAAE /* PaymentHandler.swift in Sources */,
+				09529D3E29C62E850050FEFB /* TabView.swift in Sources */,
+				0946A44229BF26E400A6E609 /* EventListView.swift in Sources */,
+				0911AFDE29C42D8200C18209 /* BuyingTicket.swift in Sources */,
+				096F428629C1299A00E54D77 /* ChangeCityButton.swift in Sources */,
+				09B6220A29BBD18700ECFF5D /* VipTicket.swift in Sources */,
+				09F9FC5229C0007200E9033E /* CityViewModel.swift in Sources */,
 				09B621FA29BBB35C00ECFF5D /* ContentView.swift in Sources */,
+				09747ABF29BF835500DBE184 /* TicketDataServices.swift in Sources */,
+				09F28BCC29BF0BB700EE0671 /* EventsDataService.swift in Sources */,
+				09F9FC4E29BFFCA300E9033E /* CityModel.swift in Sources */,
+				0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */,
+				09B6220629BBB37600ECFF5D /* EmptyTickets.swift in Sources */,
+				09FFC78329C25BC5009D3FC0 /* EventDetailView.swift in Sources */,
+				09FFC78129C25841009D3FC0 /* LocationMapPin.swift in Sources */,
+				09BFA4D729C4208B0079B3BC /* TicketRow.swift in Sources */,
 				09B621F829BBB35C00ECFF5D /* TheMoveApp.swift in Sources */,
+				09F28BC929BF0B2800EE0671 /* Event.swift in Sources */,
+				09F28BCF29BF1F8F00EE0671 /* ViewModel.swift in Sources */,
+				09F9FC5029BFFE4A00E9033E /* CityData.swift in Sources */,
+				098B6DC029D60BA50018DE5F /* MainTabViews.swift in Sources */,
+				09B6220829BBCF6600ECFF5D /* TicketModel.swift in Sources */,
+				09F9FC4C29BFC1A600E9033E /* CityList.swift in Sources */,
+				09BFA4D529C41A040079B3BC /* CartButton.swift in Sources */,
+				09BFA4D129C407E80079B3BC /* OfficialTicket.swift in Sources */,
+				09FFC78529C25FA4009D3FC0 /* EventPreviewCard.swift in Sources */,
+				092B76CE29D5410000425FF3 /* LinkCards.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +461,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,7 +472,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +490,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +501,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
