@@ -121,8 +121,8 @@
 		0911AFE229C4461B00C18209 /* Event Creator */ = {
 			isa = PBXGroup;
 			children = (
-				09F28BCD29BF1F4900EE0671 /* Mvvm */,
 				09F28BD229BF21BF00EE0671 /* Views */,
+				09F28BCD29BF1F4900EE0671 /* Mvvm */,
 			);
 			path = "Event Creator";
 			sourceTree = "<group>";

@@ -17,11 +17,11 @@ class EventsDataService{
     static let events: [Event] = [
     
    Event(name: "Jacq's kick back ", category: "Kick Back ", TType: "Kick back ", location: "444 Joy rd.", description: "come turn up with me", organizerName: "Jacq", phoneNumber: "313-444-5555", images: [
-   "shake1",
-   "shake2",
-   "shake3"
-   
-   ], coordinates:  CLLocationCoordinate2D(latitude: 42.476954474929244, longitude: -83.14910857471085), link: "https://detroitzoo.org"),
+    "shake1",
+    "shake2",
+    "shake3"
+    
+    ], coordinates:  CLLocationCoordinate2D(latitude: 42.476954474929244, longitude: -83.14910857471085), link: "https://detroitzoo.org"),
    
    
    Event(id: "", name: "Blowed pt.2", category: "party", TType: "", location: "777 E.Jefferson", price: 50, description: "We going up this weekend Dispensary truck and food truck on site", startDate: "4/20", startTime: "1Pm", endTime: "W/e", organizerName: "Aaron", phoneNumber: "313-222-2222", images: [

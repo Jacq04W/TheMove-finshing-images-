@@ -23,14 +23,11 @@ struct HomePageView: View {
                 .padding()
                 .padding(.bottom,15)
                  eventPreviewCard
-                
             }
         }.navigationBarBackButtonHidden(true)
         .sheet(isPresented: $vm.showLocationsList) {
             EventListView()
                 .presentationDetents([.fraction(0.5)])
-                
-            
         }
         .sheet(item: $vm.sheetLocations){
             event in
