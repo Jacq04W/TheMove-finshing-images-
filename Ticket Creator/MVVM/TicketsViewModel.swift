@@ -49,12 +49,6 @@ class TicketsViewModel : ObservableObject {
     
     
     var eventt = [
-    Event(name: "AAron", category: "GA", TType: "ga", location: "", description: "", organizerName: "", phoneNumber: "",
-        images: [
-        "shake1",
-        "shake2",
-        "shake3"
-    ], coordinates: CLLocationCoordinate2D(latitude: 42.476954474929244, longitude: -83.14910857471085), link: "")
-    
+    Event(images: [], address: "", coordinates: CLLocationCoordinate2D(latitude: 0, longitude: 0), holdCoords: [], date: Date())
     ]
 }

@@ -57,9 +57,9 @@ extension EventListView{
                     .cornerRadius(10)
             }
             VStack(alignment: .leading){
-                Text(event.name)
+                Text(event.name ?? "")
                     .font(.headline)
-                Text(event.location)
+                Text(event.location ?? "")
                     .font(.subheadline)
             }
             .frame(maxWidth: .infinity, alignment: .leading)

@@ -76,10 +76,10 @@ extension EventPreviewCard{
     private var titleSection : some View {
         VStack(alignment: .leading){
             
-            Text(event.name)
+            Text(event.name ?? "" )
                 .font (.title2)
                 .fontWeight (.bold)
-            Text(event.location)
+            Text(event.location ?? "" )
                 .font (.subheadline)
         }
         .frame(maxWidth:.infinity,alignment: .leading)

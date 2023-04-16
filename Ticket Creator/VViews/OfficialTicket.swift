@@ -23,7 +23,7 @@ struct OfficialTicket: View {
                     .scaledToFit()
                 
                 VStack(alignment: .leading){
-                    Text(event.name)
+                    Text(event.name ?? "")
                         .bold()
                 Text("\(ticket.price)$")
                         .font(.caption)

@@ -55,22 +55,22 @@ extension VipTickets{
                 
             }
             // details box
-            VStack {
-                VStack(alignment: .leading){
-                    Text("\(event.name)")
-                            .bold()
-                    Text("\(event.startTime ?? "" )")
-                            .font(.caption)
-                    Text("\(event.location)")
-                                .font(.caption)
-                    }
-                .padding(.bottom,25)
-                    .padding()
-                    .frame(width: 250,height: 100, alignment: .leading)
-                    .background(.ultraThinMaterial)
-                .cornerRadius(20)
-            }
-            .padding(.bottom,9)
+//            VStack {
+//                VStack(alignment: .leading){
+//                    Text("\(event.name)")
+//                            .bold()
+//                    Text("\(event.startTime ?? "" )")
+//                            .font(.caption)
+//                    Text("\(event.location)")
+//                                .font(.caption)
+//                    }
+//                .padding(.bottom,25)
+//                    .padding()
+//                    .frame(width: 250,height: 100, alignment: .leading)
+//                    .background(.ultraThinMaterial)
+//                .cornerRadius(20)
+//            }
+//            .padding(.bottom,9)
             
 // buttons
             HStack{

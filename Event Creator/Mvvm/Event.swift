@@ -14,20 +14,23 @@ import MapKit
 // this struct will be used for creating events so if we need to add more varibales on it to define it more thats fine 
 struct Event: Identifiable, Equatable{
      var id: String?
-    var name: String
-    var category: String
-    var TType: String
-    var location: String
+    var name: String?
+    var category: String?
+    var TType: String?
+    var location: String?
     var price: Int?
-    var description: String
+    var description: String?
     var startDate: String?
     var startTime: String?
     var endTime: String?
-    var organizerName: String
-    var phoneNumber: String
+    var organizerName: String?
+    var phoneNumber: String?
     var images: [String]
+    var address : String
     var coordinates: CLLocationCoordinate2D
-    var link : String
+    var holdCoords : [Double]
+    var date : Date
+    var link : String?
     var tickets = [Ticket]()
 
     struct PartyPageDetails: Identifiable{

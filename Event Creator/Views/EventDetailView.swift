@@ -94,10 +94,10 @@ extension EventDetailView {
     // new code
         private var titleSection : some View {
             VStack(alignment: .leading, spacing:8){
-                Text (event.name)
+                Text (event.name ?? "" )
                 .font (.largeTitle)
                 .fontWeight (.semibold)
-                Text (event.location)
+                Text (event.location ?? "" )
                     .font(.title3)
                 .foregroundColor (.secondary)
                
@@ -110,7 +110,7 @@ extension EventDetailView {
         
         private var descriptionSection : some View {
             VStack(alignment: .leading, spacing:16){
-                Text (event.description)
+                Text (event.description ?? "")
                 .font (.subheadline)
                 .fontWeight (.semibold)
                 .foregroundColor(.secondary)
@@ -119,7 +119,7 @@ extension EventDetailView {
                 // if the array has a link pass it through
                 // link displays the content
                 HStack{
-                    if let url = URL(string: event.link){
+                    if let url = URL(string: event.link ?? "" ){
                         Link("Read more on wiki",destination: url)
                             .font(.headline)
                             .tint(.blue)
@@ -127,7 +127,7 @@ extension EventDetailView {
             
                     }
                     
-                if let url = URL(string: event.link){
+                if let url = URL(string: event.link ?? "" ){
                     Link("Read more on wiki",destination: url)
                             .font(.headline)
                             .tint(.blue)

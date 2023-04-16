@@ -27,7 +27,7 @@ struct TicketRow: View {
     //                    }
                         
                     VStack(alignment:.leading,spacing:10){
-                        Text(event.name).bold()
+                        Text(event.name ?? "").bold()
                         // maybe need to change this
                         Text("$\(ticketVm.total)")
                     }
@@ -57,7 +57,7 @@ struct TicketRow: View {
 
 struct TicketRow_Previews: PreviewProvider {
     static var previews: some View {
-        TicketRow(ticket: tickets[0], event: Event(id: "", name: "", category: "", TType: "", location: "", price: 50, description: "", startDate: "", startTime: "", endTime: "", organizerName: "", phoneNumber: "", images: [""], coordinates:  CLLocationCoordinate2D(latitude: 42.476954474929244, longitude: -83.14910857471085), link: "", tickets: []))
+        TicketRow(ticket: tickets[0], event: Event(images: [""], address: "", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date()))
             .environmentObject(TicketsViewModel())
     }
 }

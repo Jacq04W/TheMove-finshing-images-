@@ -13,8 +13,8 @@ struct MyTickets: View {
     var body: some View {
             VStack {
                     
-    if ticketVm.ticketsA.count > 0  {
-                            
+    if ticketVm.tickets.count > 0  {
+                             
                 List {
         ForEach(ticketVm.ticketsA, id:\.id){ ticket in
             TicketRow(ticket: ticket ,event: ticket.eventt)

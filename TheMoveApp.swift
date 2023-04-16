@@ -18,7 +18,7 @@ struct TheMoveApp: App {
         
         
         WindowGroup {
-            HomePageView()
+            AddStore()
                 .environmentObject(CitiesViewModel())
                 .environmentObject(EventsViewModel())
 
