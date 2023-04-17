@@ -22,12 +22,11 @@ struct ImageView: View {
             if selectedImage != nil {
                 Image(uiImage: selectedImage!)
                     .resizable()
-                    .frame(width: 200,height:200)
-            }
+                    .frame(width: 200,height:200)}
+            
             Button("select a photo"){
-                isPickerShowing = true
-            }
-            if selectedImage != nil {
+                isPickerShowing = true}
+            if selectedImage != nil{
                 Button("Upload"){
                     uploadphotos()
                 }
@@ -68,8 +67,8 @@ struct ImageView: View {
         // path to the firebase folder
         // this he path to the storage
         let path =
-        "images/\(UUID().uuidString).jpeg"
-        let fileRef = storageRef.child(path)
+        "image/\(UUID().uuidString).jpeg"
+        let fileRef = storageRef.child("images/\(path)")
         let uploadTask = fileRef.putData(imageData!,metadata: nil){
             metaData, error in
             
@@ -77,7 +76,7 @@ struct ImageView: View {
             if error == nil && metaData != nil{
                 let db = Firestore.firestore()
                 // creates a new document in fb
-                db.collection("Event").document().setData(["url":path]){
+                db.collection("Event").document().setData(["images":path]){
                     error in
                     // if there are no errors , dispaly new image
                     if error == nil {

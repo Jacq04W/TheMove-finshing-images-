@@ -18,7 +18,7 @@ struct HomePageView: View {
                 .ignoresSafeArea()
             VStack(spacing: 0){
                 header
-                Spacer()
+                Spacer() 
                 footer
                 .padding()
                 .padding(.bottom,15)

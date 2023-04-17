@@ -32,6 +32,7 @@ struct Event: Identifiable, Equatable{
     var date : Date
     var link : String?
     var tickets = [Ticket]()
+    
 
     struct PartyPageDetails: Identifiable{
       var id : String?

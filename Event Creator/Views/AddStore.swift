@@ -15,7 +15,8 @@ import SwiftUI
 
 
 struct AddStore: View {
-   
+    @State var isPickerShowing = false
+
      @StateObject private var vm = EventsViewModel()
     var body: some View {
         NavigationView{
@@ -26,13 +27,19 @@ struct AddStore: View {
                         TextField("Description",text: $vm.description)
                         TextField("Address",text:$vm.addressString)
                         DatePicker(selection:$vm.date,label:{ Text("Date")})
+                        Button("select a photo"){
+                            isPickerShowing = true}
+                       
+                        
                     }
                     Section {
-                        Button("Add event"){
-                            vm.geocode()
-                            print("this is the stuff in the array \(vm.events)")
+                        
+                        if vm.selectedImage != nil{
+                            Button("Add event"){
+                                vm.geocode()
+                        print("this is the stuff in the array \(vm.events)")
+                            }
                         }
-                    
                     }
                 }
                 Map(coordinateRegion: $vm.mapRegion,
@@ -48,6 +55,8 @@ struct AddStore: View {
                         })
                 .ignoresSafeArea()
                 
+            }.sheet(isPresented: $isPickerShowing, onDismiss: nil){
+                ImagePicker(selectedImage: $vm.selectedImage, isPickerShowing: $isPickerShowing)
             }
             .task {
                  vm.fetchdata()
