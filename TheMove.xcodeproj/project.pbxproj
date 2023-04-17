@@ -59,11 +59,13 @@
 		09BFA4D329C418160079B3BC /* MyTickets .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D229C418160079B3BC /* MyTickets .swift */; };
 		09BFA4D529C41A040079B3BC /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D429C41A040079B3BC /* CartButton.swift */; };
 		09BFA4D729C4208B0079B3BC /* TicketRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BFA4D629C4208B0079B3BC /* TicketRow.swift */; };
+		09D7F32329ED887300C0CC89 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7F32229ED887300C0CC89 /* CityModel.swift */; };
+		09D7F32629ED8AB500C0CC89 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7F32529ED8AB500C0CC89 /* ImageViewModel.swift */; };
+		09D7F32829ED8E6300C0CC89 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D7F32729ED8E6200C0CC89 /* ImageView.swift */; };
 		09F28BC929BF0B2800EE0671 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BC829BF0B2800EE0671 /* Event.swift */; };
 		09F28BCC29BF0BB700EE0671 /* EventsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BCB29BF0BB700EE0671 /* EventsDataService.swift */; };
 		09F28BCF29BF1F8F00EE0671 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F28BCE29BF1F8F00EE0671 /* ViewModel.swift */; };
 		09F9FC4C29BFC1A600E9033E /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4B29BFC1A600E9033E /* CityList.swift */; };
-		09F9FC4E29BFFCA300E9033E /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4D29BFFCA300E9033E /* CityModel.swift */; };
 		09F9FC5029BFFE4A00E9033E /* CityData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC4F29BFFE4A00E9033E /* CityData.swift */; };
 		09F9FC5229C0007200E9033E /* CityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F9FC5129C0007200E9033E /* CityViewModel.swift */; };
 		09FAB73B29D4869E006C1556 /* ProfilePage .swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FAB73A29D4869E006C1556 /* ProfilePage .swift */; };
@@ -99,11 +101,13 @@
 		09BFA4D229C418160079B3BC /* MyTickets .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyTickets .swift"; sourceTree = "<group>"; };
 		09BFA4D429C41A040079B3BC /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
 		09BFA4D629C4208B0079B3BC /* TicketRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketRow.swift; sourceTree = "<group>"; };
+		09D7F32229ED887300C0CC89 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		09D7F32529ED8AB500C0CC89 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		09D7F32729ED8E6200C0CC89 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		09F28BC829BF0B2800EE0671 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		09F28BCB29BF0BB700EE0671 /* EventsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsDataService.swift; sourceTree = "<group>"; };
 		09F28BCE29BF1F8F00EE0671 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		09F9FC4B29BFC1A600E9033E /* CityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
-		09F9FC4D29BFFCA300E9033E /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
 		09F9FC4F29BFFE4A00E9033E /* CityData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityData.swift; sourceTree = "<group>"; };
 		09F9FC5129C0007200E9033E /* CityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewModel.swift; sourceTree = "<group>"; };
 		09FAB73A29D4869E006C1556 /* ProfilePage .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfilePage .swift"; sourceTree = "<group>"; };
@@ -164,7 +168,7 @@
 			children = (
 				09F9FC5129C0007200E9033E /* CityViewModel.swift */,
 				09F9FC4F29BFFE4A00E9033E /* CityData.swift */,
-				09F9FC4D29BFFCA300E9033E /* CityModel.swift */,
+				09D7F32229ED887300C0CC89 /* CityModel.swift */,
 			);
 			path = Mvvm;
 			sourceTree = "<group>";
@@ -181,6 +185,7 @@
 		0911AFE229C4461B00C18209 /* Event Creator */ = {
 			isa = PBXGroup;
 			children = (
+				09D7F32429ED8A7F00C0CC89 /* ImageCrreator */,
 				09F28BD229BF21BF00EE0671 /* Views */,
 				09F28BCD29BF1F4900EE0671 /* Mvvm */,
 			);
@@ -261,6 +266,15 @@
 				09B621FE29BBB35E00ECFF5D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		09D7F32429ED8A7F00C0CC89 /* ImageCrreator */ = {
+			isa = PBXGroup;
+			children = (
+				09D7F32529ED8AB500C0CC89 /* ImageViewModel.swift */,
+				09D7F32729ED8E6200C0CC89 /* ImageView.swift */,
+			);
+			path = ImageCrreator;
 			sourceTree = "<group>";
 		};
 		09F28BCD29BF1F4900EE0671 /* Mvvm */ = {
@@ -397,6 +411,7 @@
 				09BFA4D329C418160079B3BC /* MyTickets .swift in Sources */,
 				09747AC129BF84B400DBE184 /* TicketsViewModel.swift in Sources */,
 				0970016629CBCDCA0005DAAE /* PaymentHandler.swift in Sources */,
+				09D7F32829ED8E6300C0CC89 /* ImageView.swift in Sources */,
 				09529D3E29C62E850050FEFB /* TabView.swift in Sources */,
 				0946A44229BF26E400A6E609 /* EventListView.swift in Sources */,
 				0911AFDE29C42D8200C18209 /* BuyingTicket.swift in Sources */,
@@ -404,10 +419,10 @@
 				09B6220A29BBD18700ECFF5D /* VipTicket.swift in Sources */,
 				09F9FC5229C0007200E9033E /* CityViewModel.swift in Sources */,
 				09B621FA29BBB35C00ECFF5D /* ContentView.swift in Sources */,
+				09D7F32629ED8AB500C0CC89 /* ImageViewModel.swift in Sources */,
 				09292E3129EB7ECD0009E425 /* MapPins.swift in Sources */,
 				09747ABF29BF835500DBE184 /* TicketDataServices.swift in Sources */,
 				09F28BCC29BF0BB700EE0671 /* EventsDataService.swift in Sources */,
-				09F9FC4E29BFFCA300E9033E /* CityModel.swift in Sources */,
 				0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */,
 				09B6220629BBB37600ECFF5D /* EmptyTickets.swift in Sources */,
 				09FFC78329C25BC5009D3FC0 /* EventDetailView.swift in Sources */,
@@ -416,6 +431,7 @@
 				09B621F829BBB35C00ECFF5D /* TheMoveApp.swift in Sources */,
 				09F28BC929BF0B2800EE0671 /* Event.swift in Sources */,
 				09F28BCF29BF1F8F00EE0671 /* ViewModel.swift in Sources */,
+				09D7F32329ED887300C0CC89 /* CityModel.swift in Sources */,
 				09F9FC5029BFFE4A00E9033E /* CityData.swift in Sources */,
 				098B6DC029D60BA50018DE5F /* MainTabViews.swift in Sources */,
 				09B6220829BBCF6600ECFF5D /* TicketModel.swift in Sources */,
