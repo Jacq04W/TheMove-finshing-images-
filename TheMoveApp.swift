@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Firebase
-@main
+ @main
 struct TheMoveApp: App {
     @EnvironmentObject private var vm: EventsViewModel
     @EnvironmentObject private var cityVm: CitiesViewModel
@@ -18,10 +18,24 @@ struct TheMoveApp: App {
         
         
         WindowGroup {
-            HomePageView()
-                .environmentObject(CitiesViewModel())
+            TabView{
+                HomePageView()
+                    .tabItem {
+            Label("house.fill",systemImage: "house")
+                    }
+                
+                
+                
+                AddStore()
+            .tabItem {
+            Label("add event",systemImage: "plus")
+                    }
+                
+          
+                   
+            } .environmentObject(CitiesViewModel())
                 .environmentObject(EventsViewModel())
-
+            
         }
     }
 }

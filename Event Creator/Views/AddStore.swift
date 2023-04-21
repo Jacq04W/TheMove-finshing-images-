@@ -42,18 +42,29 @@ struct AddStore: View {
                         }
                     }
                 }
-                Map(coordinateRegion: $vm.mapRegion,
-                        annotationItems: vm.events,
-                        annotationContent: { location in
-                        MapAnnotation(coordinate: location.coordinates){
-                        
-                            
-                            MapPins()
-                            
-                        }
                 
-                        })
-                .ignoresSafeArea()
+                HStack{
+                    // loop throught the image=s
+                    ForEach(vm.retrievedImages,id:\.self){image in
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: 200,height: 200)
+                    }
+                    
+                    
+                    //                Map(coordinateRegion: $vm.mapRegion,
+                    //                        annotationItems: vm.events,
+                    //                        annotationContent: { location in
+                    //                        MapAnnotation(coordinate: location.coordinates){
+                    //
+                    //
+                    //                            MapPins()
+                    //
+                    //                        }
+                    //
+                    //                        })
+                    //                .ignoresSafeArea()
+                }
                 
             }.sheet(isPresented: $isPickerShowing, onDismiss: nil){
                 ImagePicker(selectedImage: $vm.selectedImage, isPickerShowing: $isPickerShowing)

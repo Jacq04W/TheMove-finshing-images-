@@ -101,20 +101,19 @@ struct ImageView: View {
         // all the retreived pics are here
 //               snapshot?.documents
                 var paths = [String]()
-                // loop through all the retunerde docs
+                // loop through all the returned docs
                 for doc in snapshot!.documents {
-                    // exctarce the file path and add array
+                    // extract the file path and add array
                    
                 if let url = doc["url"] as? String {
                         paths.append(url)
                     }
-                    
-                    
+            
                     print("Url Appeneds succes")
                 }
-                // loop througth each file and fetch thje data
+                // loop througth each file and fetch the data
                 for path in paths {
-                    // get ref to stroage
+                    // get ref to storage
                     let storageRef = Storage.storage().reference()
                     // specify path
                     let fileRef = storageRef.child(path)

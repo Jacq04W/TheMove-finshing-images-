@@ -145,6 +145,7 @@ extension EventsViewModel{
                 print("cant get snapshot")
                 return }
             if let snapshot = snapshot {
+                var paths = [String]()
                 for document in snapshot.documents {
                     let data = document.data ()
                     let name = data["name"] as? String ?? ""
@@ -155,11 +156,44 @@ extension EventsViewModel{
                         let newDate = createdAt.dateValue()
                         print("Created at: \(date)")
                     }
+                    if let url = data["images"] as? String {
+                        paths.append(url)
+                    }
+                    // loop througth each file and fetch the data
+                    for path in paths {
+                        // get ref to storage
+                        let storageRef = Storage.storage().reference()
+                        // specify path
+                        let fileRef = storageRef.child(path)
+                        // retrieve data
+                        fileRef.getData(maxSize: 5 * 1024 * 1024){
+                            data, error in
+                            if error == nil && data != nil {
+                                // put this in array for display
+                                if let urlImage = UIImage(data: data!){
+                                    DispatchQueue.main.async {
+                                        self.retrievedImages.append(urlImage)
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                     // need core location coordintes from fire base
                     // this is the data from FireB we will be appending to our main array ↓
-                    let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: [], address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: date, link: "")
+                    let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: self.retrievedImages, address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: date, link: "")
+                                    // end of path
+
                     DispatchQueue.main.async{
                         events.append(event)
                     }
@@ -173,6 +207,7 @@ extension EventsViewModel{
     
     
     
+    // new code
     
     func addEvent(){
         addEvent(newName: name, newDescription: description, date: date)
@@ -268,19 +303,15 @@ extension EventsViewModel{
                             
                             if error == nil {
                                 DispatchQueue.main.async {
-                            // this is what is being displeyed on the UI
-//                            self.retrievedImages.append(self.selectedImage!)
-//                        self.eventLocation.images.append(self.selectedImage!)
+//                             this is what is being displeyed on the UI
+                            self.retrievedImages.append(self.selectedImage!)
+                        self.eventLocation.images.append(self.selectedImage!)
                                 }}
                             else {
                                 print (error?.localizedDescription )
                                 print("cant add new data")
                             }
-                            //                    if let error = error {
-                            //                        print (error.localizedDescription)
-                            //                        print("cant add new data")
-                            //
-                            //                    }
+                            
                         }
                     }
                 }
