@@ -16,7 +16,7 @@ struct OfficialTicket: View {
     var body: some View {
         ZStack(alignment: .topTrailing){
             ZStack(alignment: .bottom){
-                Image(event.images[0])
+                Image(uiImage: event.images[0])
                     .resizable()
                     .cornerRadius(20)
                     .frame(width: 180)

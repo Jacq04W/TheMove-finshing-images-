@@ -46,7 +46,7 @@ extension VipTickets{
                 .scaledToFit()
          // header
             VStack{
-                Image(event.images[0])
+                Image(uiImage: event.images[0])
                     .resizable()
                     .cornerRadius(20)
                     .frame(width: 250,height: 150)

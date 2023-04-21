@@ -5,7 +5,14 @@
 //  Created by Jacquese Whitson  on 3/15/23.
 //
 
+import CoreLocation
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseDatabase
+import MapKit
 import SwiftUI
+import FirebaseStorage
+
 
 struct EventPreviewCard: View {
     @EnvironmentObject private var vm : EventsViewModel
@@ -39,8 +46,11 @@ struct EventPreviewCard: View {
 }
 
 struct EventPreviewCard_Previews: PreviewProvider {
+
+    
     static var previews: some View {
-        EventPreviewCard(event: EventsDataService.events.first!)
+        EventPreviewCard(event: Event( name: "Mike", category: "kickback", TType: "Party", location: "777 Woodward", price: 20, description: "come turnuo with me", startDate: "7/11", organizerName: "Jacq", phoneNumber: "313-777-2222", images: [], address: "777 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date(), link:" ")
+        )
             .padding()
             .environmentObject(EventsViewModel())
 
@@ -57,16 +67,26 @@ extension EventPreviewCard{
     private var imageSection : some View {
         ZStack{
             if let images = event.images.first {
-                Image (images)
+                Image (uiImage: images)
                     .resizable ()
                     .scaledToFill()
                     .frame (width: 100, height: 100)
                     .cornerRadius(10)
             }
+            else{
+                Image(systemName:"person.fill")
+                    .resizable ()
+                    .scaledToFill()
+                    .frame (width: 100, height: 100)
+                    .cornerRadius(10)
+                
+            }
         }
         .padding(6)
         .background(Color.white)
         .cornerRadius(10)
+        
+        // use border tp outline the frame 
     }
 }
 

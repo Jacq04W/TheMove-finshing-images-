@@ -13,7 +13,7 @@ class CitiesViewModel : EventsViewModel {
     @Published var cities : [City]
    @Published var newMapLocation: City {
    didSet {
-        updateMapRegion( mapLocation)
+        updateMapRegion( eventLocation)
        }
    }// end mapLo
     @State var currentLocation = false

@@ -25,7 +25,7 @@ struct Event: Identifiable, Equatable{
     var endTime: String?
     var organizerName: String?
     var phoneNumber: String?
-    var images: [String]
+    var images: [UIImage]
     var address : String
     var coordinates: CLLocationCoordinate2D
     var holdCoords : [Double]

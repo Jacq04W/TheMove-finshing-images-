@@ -32,12 +32,14 @@ class EventsViewModel : ObservableObject{
     @Published var showSheet: Bool = false
     @Published var newCoordinates: [Double] = []
     
-    let defaultEvent = Event(images: [], address: "660 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date())
+     var staticEvent : Event = Event( name: "Mike", category: "kickback", TType: "Party", location: "downtown", price: 20, description: "come turnuo with me", startDate: "7/11", organizerName: "Jacq", phoneNumber: "313-777-2222", images: [], address: "777 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date(), link:" ")
+    
+     let defaultEvent = Event(images: [], address: "660 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date())
     /// current location on map ↓
-    @Published var mapLocation: Event {
+    @Published var eventLocation: Event {
         /// everytime the map location is set update the map region so they match ↓
         didSet {
-            updateMapRegion(mapLocation)
+            updateMapRegion(eventLocation)
         }
     }
     
@@ -59,7 +61,7 @@ class EventsViewModel : ObservableObject{
         
         // set this to the first lo in the array ↓
         // only force unwrap this beacause we know for a fact there is always soemthing in our array
-        self.mapLocation = events.first ?? defaultEvent
+        self.eventLocation = events.first ?? defaultEvent
         
         // starts our map view off with the lo of the first thing in the array ↓
         self.updateMapRegion(events.first ?? defaultEvent)
@@ -96,7 +98,7 @@ class EventsViewModel : ObservableObject{
     // it will change the map location to whichever one of the cards is pressed
     func showNextEvent(_ event: Event){
         withAnimation(.easeInOut){
-            mapLocation = event
+            eventLocation = event
             changeCityLocation.toggle()
             // this will close the list row ↑
         }
@@ -108,7 +110,7 @@ class EventsViewModel : ObservableObject{
         // seeing what the first item in the aaray is
         
         // check the current index
-        guard let currentIndex = events.firstIndex(where: {$0 == mapLocation}) else {
+        guard let currentIndex = events.firstIndex(where: {$0 == eventLocation}) else {
             return
         }
         
@@ -157,8 +159,7 @@ extension EventsViewModel{
                     
                     // need core location coordintes from fire base
                     // this is the data from FireB we will be appending to our main array ↓
-                    let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: [""], address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: date, link: "")
-                    
+                    let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: [], address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: date, link: "")
                     DispatchQueue.main.async{
                         events.append(event)
                     }
@@ -216,6 +217,21 @@ extension EventsViewModel{
             let lat = locationInfo?.coordinate.latitude ?? 0.00
             let lon = locationInfo?.coordinate.longitude ?? 0.00
             
+            
+            
+            // Send coords to firebase
+//            let db = Firestore.firestore()
+            newCoordinates.append(lat)
+            newCoordinates.append(lon)
+//            print("item in new coordinate \(newCoordinates.count)")
+            self.newCoordinates = [lat,lon]
+            var coordinatesDict = [String: Double]()
+            for (index, coords) in newCoordinates.enumerated() {
+                coordinatesDict[String(index)] = coords
+            }
+            
+            
+            // upload photos code
             // send images to firebase
             guard selectedImage != nil else {
                 return}
@@ -228,41 +244,44 @@ extension EventsViewModel{
             }
             // path to the firebase folder
             // this he path to the storage
-            let imagePath =
-            "images/\(UUID().uuidString).jpeg"
-            let fileRef = storageRef.child("images/\(imagePath)")
-            
-            
-            // Send coords to firebase
-            let db = Firestore.firestore()
-            newCoordinates.append(lat)
-            newCoordinates.append(lon)
-            print("item in new coordinate \(newCoordinates.count)")
-            self.newCoordinates = [lat,lon]
-            var coordinatesDict = [String: Double]()
-            for (index, coords) in newCoordinates.enumerated() {
-                coordinatesDict[String(index)] = coords
-            }
+     let imagePath = "images/\(UUID().uuidString).jpeg"
+        let fileRef = storageRef.child("images/\(imagePath)")
             
             // Sending rest of event info to FB
             func addEvent(newName: String,newDescription: String,date:Date){
-                let db = Firestore.firestore()
-                let ref = db.collection("Event").document(newName)
-                let timestamp = Int(date.timeIntervalSince1970)
-                ref.setData([ "name": newName
-                              ,"description": newDescription,
-                              "address": addressString,
-                              "holdCoords": newCoordinates,
-                              "date" : timestamp,
-                              "images":imagePath
-                            ]){ error in
-                    
-                    self.retrievedImages.append(self.selectedImage!)
-                    
-                    if let error = error {
-                        print (error.localizedDescription)
-                        print("cant add new data")
+                
+                let uploadTask = fileRef.putData(imageData!,metadata: nil){
+                    metaData, error in
+                  
+            if error == nil && metaData != nil{
                         
+            let db = Firestore.firestore()
+            let ref = db.collection("Event").document(newName)
+            let timestamp = Int(date.timeIntervalSince1970)
+                        ref.setData([ "name": newName
+                                      ,"description": newDescription,
+                                      "address": addressString,
+                                      "holdCoords": self.newCoordinates,
+                                      "date": timestamp,
+                                      "images":imagePath
+                                    ]){ error in
+                            
+                            if error == nil {
+                                DispatchQueue.main.async {
+                            // this is what is being displeyed on the UI
+//                            self.retrievedImages.append(self.selectedImage!)
+//                        self.eventLocation.images.append(self.selectedImage!)
+                                }}
+                            else {
+                                print (error?.localizedDescription )
+                                print("cant add new data")
+                            }
+                            //                    if let error = error {
+                            //                        print (error.localizedDescription)
+                            //                        print("cant add new data")
+                            //
+                            //                    }
+                        }
                     }
                 }
             }
@@ -270,11 +289,10 @@ extension EventsViewModel{
             func addEvent(){
                 addEvent(newName: name, newDescription: description, date: date )
             }
-            //
+        
             
             DispatchQueue.main.async { [self] in
-                let newLocation = Event(name: self.name, category: "", TType: "", location: "", description:"", organizerName: "", phoneNumber: "", images: [""], address:addressString, coordinates: CLLocationCoordinate2D(latitude: newCoordinates[0], longitude: newCoordinates[1]), holdCoords: newCoordinates, date: date, link: "")
-                
+                let newLocation = Event(name: self.name, category: "", TType: "", location: "", description:"", organizerName: "", phoneNumber: "", images: self.retrievedImages, address:addressString, coordinates: CLLocationCoordinate2D(latitude: newCoordinates[0], longitude: newCoordinates[1]), holdCoords: newCoordinates, date: date, link: "")
                 
                 self.events.append(newLocation)
                 self.mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: newLocation.coordinates.latitude, longitude: newLocation.coordinates.longitude), span: mapSpan)
@@ -283,6 +301,8 @@ extension EventsViewModel{
             }
         }
     }
+
+
     
     // new code
     func refreshdata(){
@@ -313,7 +333,7 @@ extension EventsViewModel{
                     
                     // need core location coordintes from fire base
                     let event =
-                    Event(images: [""], address: "", coordinates: CLLocationCoordinate2D(latitude: lat, longitude: lon), holdCoords: self.newCoordinates, date: Date())
+                    Event(images: [], address: "", coordinates: CLLocationCoordinate2D(latitude: lat, longitude: lon), holdCoords: self.newCoordinates, date: Date())
                     
                     //
                     //                     Store(name: name, coordinates: CLLocationCoordinate2D(latitude:lat, longitude: lon), holdCoords: self.newCoordinates, date: self.date)

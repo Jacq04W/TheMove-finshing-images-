@@ -15,7 +15,7 @@ struct TicketRow: View {
 
         var body: some View {
                 HStack(spacing: 20){
-                    Image(event.images[0])
+                    Image(uiImage: event.images[0])
                         .resizable()
                         .aspectRatio( contentMode: .fit)
                         .frame(width: 50)
@@ -46,7 +46,7 @@ struct TicketRow: View {
                 .frame(width: 350)
                 .frame(height: 70)
                 .background(.ultraThinMaterial)
-                .background(Image(event.images[0])
+                .background(Image(uiImage: event.images[0])
                     .resizable()
                     .aspectRatio (contentMode: .fill))
                 .cornerRadius(20)
@@ -57,7 +57,7 @@ struct TicketRow: View {
 
 struct TicketRow_Previews: PreviewProvider {
     static var previews: some View {
-        TicketRow(ticket: tickets[0], event: Event(images: [""], address: "", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date()))
+        TicketRow(ticket: tickets[0], event: Event(images: [], address: "", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date()))
             .environmentObject(TicketsViewModel())
     }
 }

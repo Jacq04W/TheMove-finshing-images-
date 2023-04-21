@@ -64,7 +64,8 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetailView( event: EventsDataService.events.first!)
+        EventDetailView( event: Event( name: "Mike", category: "kickback", TType: "Party", location: "777 Woodward", price: 20, description: "come turnuo with me", startDate: "7/11", organizerName: "Jacq", phoneNumber: "313-777-2222", images: [], address: "777 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date(), link:" ")
+        )
             .environmentObject(EventsViewModel())
 
     }
@@ -75,7 +76,7 @@ extension EventDetailView {
         private var imageSection : some View  {
             TabView{
                 ForEach(event.images,id: \.self){
-                    Image($0)
+                    Image(uiImage: $0 )
                         .resizable()
                         .scaledToFill()
                     // makes the imaegse the size of the screen

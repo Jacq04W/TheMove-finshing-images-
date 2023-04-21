@@ -39,18 +39,13 @@ struct EventListView_Previews: PreviewProvider {
 }
 
 
-
-
-
-
-
 extension EventListView{
     
     // this function  will display and format the info of each location into a card
     private func listRowView(_ event: Event) -> some View{
         HStack{
             if let images = event.images.first{
-                Image(images)
+                Image(uiImage:images)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 45, height: 45)
@@ -72,7 +67,7 @@ extension EventListView{
         .frame(width: 350)
         .frame(height: 70)
         .background(.ultraThinMaterial)
-        .background(Image(event.images[0])
+        .background(Image(uiImage: event.images[0])
             .resizable()
             .aspectRatio (contentMode: .fill))
         .cornerRadius(20)

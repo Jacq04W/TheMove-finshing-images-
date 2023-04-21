@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 struct HomePageView: View {
     @EnvironmentObject private var vm: EventsViewModel
-    @EnvironmentObject private var cityVm: CitiesViewModel
+    @EnvironmentObject private var cityVm: CitiesViewModel 
 
     var body: some View {
         ZStack{
@@ -38,13 +38,9 @@ struct HomePageView: View {
 
 
     }
+
     
-    
-    
-    
-    
-    
-    
+     
     
 // custom varibales
     var footer: some View {
@@ -111,7 +107,7 @@ struct HomePageView: View {
             MapAnnotation(coordinate: event.coordinates){
              //custom pins
                     LocationMapPin()
-                    .scaleEffect(vm.mapLocation == event ? 1 : 0.7)
+                    .scaleEffect(vm.eventLocation == event ? 1 : 0.7)
                     .onTapGesture {
                         vm.showNextEvent(event)
                     }
@@ -124,7 +120,7 @@ struct HomePageView: View {
             
             // // lets the card be == to the current lo
             ForEach (vm.events) { event in
-                if vm.mapLocation == event {
+                if vm.eventLocation == event {
                     
                      EventPreviewCard(event: event)
                     .shadow (color: Color.black.opacity (0.3),
