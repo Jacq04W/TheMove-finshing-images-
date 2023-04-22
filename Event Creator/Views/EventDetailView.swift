@@ -75,8 +75,6 @@ struct EventDetailView_Previews: PreviewProvider {
 extension EventDetailView {
         private var imageSection : some View  {
             TabView{
-                
-                
                 ForEach(event.images,id: \.self){
                     Image(uiImage: $0 )
                         .resizable()

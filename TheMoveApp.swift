@@ -15,24 +15,18 @@ struct TheMoveApp: App {
         FirebaseApp.configure()
     }
     var body: some Scene {
-        
-        
         WindowGroup {
             TabView{
                 HomePageView()
                     .tabItem {
             Label("house.fill",systemImage: "house")
                     }
-                
-                
-                
+        
                 AddStore()
             .tabItem {
             Label("add event",systemImage: "plus")
                     }
-                
-          
-                   
+                  
             } .environmentObject(CitiesViewModel())
                 .environmentObject(EventsViewModel())
             

@@ -24,6 +24,12 @@ struct HomePageView: View {
                 .padding(.bottom,15)
                  eventPreviewCard
             }
+//            .task {
+//                vm.fetchdata()
+//            }
+            .refreshable {
+                vm.refreshdata()
+            }
         }.navigationBarBackButtonHidden(true)
         .sheet(isPresented: $vm.showLocationsList) {
             EventListView()

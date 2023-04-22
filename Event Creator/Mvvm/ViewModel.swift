@@ -134,8 +134,6 @@ class EventsViewModel : ObservableObject{
 
 
 extension EventsViewModel{
-    
-    
     func fetchdata(){
         let db = Firestore.firestore()
         let ref = db.collection("Event")
@@ -162,81 +160,42 @@ extension EventsViewModel{
                     // loop througth each file and fetch the data
                     for path in paths {
                         // get ref to storage
-                        let storageRef = Storage.storage().reference()
+                let storageRef = Storage.storage().reference()
                         // specify path
                         let fileRef = storageRef.child(path)
                         // retrieve data
                         fileRef.getData(maxSize: 5 * 1024 * 1024){
                             data, error in
                             if error == nil && data != nil {
-                                // put this in array for display
-                                if let urlImage = UIImage(data: data!){
-                                    DispatchQueue.main.async {
-                                        self.retrievedImages.append(urlImage)
-                                        
+                            if let urlImage = UIImage(data: data!){
+            DispatchQueue.main.async {
+            self.retrievedImages.append(urlImage)
                                     }
                                 }
                             }
                         }
-                        
-                        
                     }
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    // need core location coordintes from fire base
-                    // this is the data from FireB we will be appending to our main array ↓
-                    let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: self.retrievedImages, address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: date, link: "")
-                                    // end of path
-
                     DispatchQueue.main.async{
-                        events.append(event)
+let event = Event(name: name, category: "", TType: "", location: "", description: description, organizerName: "", phoneNumber: "", images: self.retrievedImages, address: address, coordinates: CLLocationCoordinate2D(latitude: coordinates[0], longitude: coordinates[1]), holdCoords: coordinates, date: self.date, link: "")
+                 
+                        self.events.append(event)
                     }
                 }
                 // appends to the big array
                 self.events = events
-                
             }
         }
     }
     
-    
-    
     // new code
-    
-    func addEvent(){
-        addEvent(newName: name, newDescription: description, date: date)
-    }
-    
-    func addEvent(newName: String,newDescription: String,date:Date){
-        let db = Firestore.firestore()
-        let ref = db.collection("Event").document(newName)
-        let timestamp = Int(date.timeIntervalSince1970)
-        ref.setData([ "name": newName
-                      ,"description": newDescription,
-                      "address": addressString,
-                      "holdCoords": newCoordinates,
-                      "date" : timestamp
-                    ]){ error in
-            if let error = error {
-                print (error.localizedDescription)
-                print("cant add new data")}}}
-    
-    
-    
-    
+//    func addEvent(){
+//        addEvent(newName: name, newDescription: description, date: date)
+//    }
     
     // new code
     func geocode(){
         geocode(from: addressString)
-        
     }
-    
     func geocode(from addressString: String) {
         let geocoder = CLGeocoder()
         // decode info from here
@@ -333,15 +292,13 @@ extension EventsViewModel{
         }
     }
 
-
-    
     // new code
     func refreshdata(){
         events.removeAll()
         let db = Firestore.firestore()
         let ref = db.collection("Event")
         
-        ref.getDocuments { snapshot, error in
+        ref.getDocuments{ snapshot, error in
             guard error == nil else {
                 print (error! .localizedDescription)
                 print("cant get snapshot")
@@ -365,10 +322,6 @@ extension EventsViewModel{
                     // need core location coordintes from fire base
                     let event =
                     Event(images: [], address: "", coordinates: CLLocationCoordinate2D(latitude: lat, longitude: lon), holdCoords: self.newCoordinates, date: Date())
-                    
-                    //
-                    //                     Store(name: name, coordinates: CLLocationCoordinate2D(latitude:lat, longitude: lon), holdCoords: self.newCoordinates, date: self.date)
-                    //
                     self.events.append(event)
                     
                 }
