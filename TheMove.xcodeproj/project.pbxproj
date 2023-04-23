@@ -11,6 +11,7 @@
 		09292E2F29EB7E7D0009E425 /* AddStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09292E2E29EB7E7D0009E425 /* AddStore.swift */; };
 		09292E3129EB7ECD0009E425 /* MapPins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09292E3029EB7ECD0009E425 /* MapPins.swift */; };
 		092B76CE29D5410000425FF3 /* LinkCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B76CD29D5410000425FF3 /* LinkCards.swift */; };
+		093DF75B29F59B5E00396641 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093DF75A29F59B5E00396641 /* Photo.swift */; };
 		0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A43F29BF24B900A6E609 /* HomePageView.swift */; };
 		0946A44229BF26E400A6E609 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A44129BF26E400A6E609 /* EventListView.swift */; };
 		09529D3E29C62E850050FEFB /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09529D3D29C62E850050FEFB /* TabView.swift */; };
@@ -79,6 +80,7 @@
 		09292E2E29EB7E7D0009E425 /* AddStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStore.swift; sourceTree = "<group>"; };
 		09292E3029EB7ECD0009E425 /* MapPins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPins.swift; sourceTree = "<group>"; };
 		092B76CD29D5410000425FF3 /* LinkCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCards.swift; sourceTree = "<group>"; };
+		093DF75A29F59B5E00396641 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0946A43F29BF24B900A6E609 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		0946A44129BF26E400A6E609 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		09529D3D29C62E850050FEFB /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -185,11 +187,20 @@
 		0911AFE229C4461B00C18209 /* Event Creator */ = {
 			isa = PBXGroup;
 			children = (
+				093DF75929F59B2200396641 /* PhotoCreator  */,
 				09D7F32429ED8A7F00C0CC89 /* ImageCrreator */,
 				09F28BD229BF21BF00EE0671 /* Views */,
 				09F28BCD29BF1F4900EE0671 /* Mvvm */,
 			);
 			path = "Event Creator";
+			sourceTree = "<group>";
+		};
+		093DF75929F59B2200396641 /* PhotoCreator  */ = {
+			isa = PBXGroup;
+			children = (
+				093DF75A29F59B5E00396641 /* Photo.swift */,
+			);
+			path = "PhotoCreator ";
 			sourceTree = "<group>";
 		};
 		0970712929C4276C00C391E8 /* Ticket Creator */ = {
@@ -418,6 +429,7 @@
 				096F428629C1299A00E54D77 /* ChangeCityButton.swift in Sources */,
 				09B6220A29BBD18700ECFF5D /* VipTicket.swift in Sources */,
 				09F9FC5229C0007200E9033E /* CityViewModel.swift in Sources */,
+				093DF75B29F59B5E00396641 /* Photo.swift in Sources */,
 				09B621FA29BBB35C00ECFF5D /* ContentView.swift in Sources */,
 				09D7F32629ED8AB500C0CC89 /* ImageViewModel.swift in Sources */,
 				09292E3129EB7ECD0009E425 /* MapPins.swift in Sources */,
