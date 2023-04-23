@@ -27,3 +27,57 @@ struct Photo : Identifiable, Codable {
     }
     
 }
+
+func saveImage(event: Event,photo: Photo,image: UIImage) async -> Bool {
+    guard let eventID = event.id else {
+        print("🤬 ERRORS spot.id == nil")
+        return false
+    }
+    
+    let photoName = UUID().uuidString
+    let storage = Storage.storage()
+    let storageRef = storage.reference().child("\(eventID)/\(photoName).jpeg")
+    
+    guard let resizedImage = image.jpegData(compressionQuality: 0.2) else {
+        print("🤬 ERROR: could not resize image")
+        return false
+    }
+    
+    let metadata = StorageMetadata()
+    metadata.contentType = "image/jpg"
+    
+    var imageURLString = ""
+    
+    do {
+        let _ = try await storageRef.putDataAsync(resizedImage,metadata: metadata)
+        print("😎 image saved")
+        do {
+            let imageURL = try await storageRef.downloadURL()
+            imageURLString = "\(imageURL)"
+            
+        }catch{
+            print("🤬 ERROR: could not get imageUrl after saving image")
+            return false
+         }
+    }
+    catch {
+        print("🤬 ERROR: Uploading image to firebase")
+        return false
+    }
+    
+    let db = Firestore.firestore()
+    let collectionString  = "Event/\(eventID)/photos" // might have to rerock 'event' here
+    do {
+        var newPhoto = photo
+        newPhoto.imageURLString = imageURLString
+        try await db.collection(collectionString).document(photoName).setData(newPhoto.dictionary)
+        print("😎 Data loaded successfully")
+        return true
+    }catch{
+        print("🤬 ERROR: Uploading image do firebase")
+        return false
+    }
+    
+} // end func
+
+
