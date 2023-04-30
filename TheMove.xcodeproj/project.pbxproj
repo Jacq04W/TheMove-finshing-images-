@@ -12,6 +12,7 @@
 		09292E3129EB7ECD0009E425 /* MapPins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09292E3029EB7ECD0009E425 /* MapPins.swift */; };
 		092B76CE29D5410000425FF3 /* LinkCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092B76CD29D5410000425FF3 /* LinkCards.swift */; };
 		093DF75B29F59B5E00396641 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093DF75A29F59B5E00396641 /* Photo.swift */; };
+		093DF75D29F5CA7100396641 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093DF75C29F5CA7100396641 /* PhotoView.swift */; };
 		0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A43F29BF24B900A6E609 /* HomePageView.swift */; };
 		0946A44229BF26E400A6E609 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0946A44129BF26E400A6E609 /* EventListView.swift */; };
 		09529D3E29C62E850050FEFB /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09529D3D29C62E850050FEFB /* TabView.swift */; };
@@ -21,6 +22,8 @@
 		09747ABF29BF835500DBE184 /* TicketDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747ABE29BF835500DBE184 /* TicketDataServices.swift */; };
 		09747AC129BF84B400DBE184 /* TicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09747AC029BF84B400DBE184 /* TicketsViewModel.swift */; };
 		098B6DC029D60BA50018DE5F /* MainTabViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098B6DBF29D60BA50018DE5F /* MainTabViews.swift */; };
+		099A15A729FDCE28007882E6 /* EventSummaryCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A15A629FDCE28007882E6 /* EventSummaryCard .swift */; };
+		099A15A929FE3E98007882E6 /* AddingCardsToCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099A15A829FE3E98007882E6 /* AddingCardsToCart.swift */; };
 		09B621F829BBB35C00ECFF5D /* TheMoveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B621F729BBB35C00ECFF5D /* TheMoveApp.swift */; };
 		09B621FA29BBB35C00ECFF5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B621F929BBB35C00ECFF5D /* ContentView.swift */; };
 		09B621FC29BBB35E00ECFF5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09B621FB29BBB35E00ECFF5D /* Assets.xcassets */; };
@@ -81,6 +84,7 @@
 		09292E3029EB7ECD0009E425 /* MapPins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPins.swift; sourceTree = "<group>"; };
 		092B76CD29D5410000425FF3 /* LinkCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCards.swift; sourceTree = "<group>"; };
 		093DF75A29F59B5E00396641 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		093DF75C29F5CA7100396641 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		0946A43F29BF24B900A6E609 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		0946A44129BF26E400A6E609 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		09529D3D29C62E850050FEFB /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		09747ABE29BF835500DBE184 /* TicketDataServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDataServices.swift; sourceTree = "<group>"; };
 		09747AC029BF84B400DBE184 /* TicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsViewModel.swift; sourceTree = "<group>"; };
 		098B6DBF29D60BA50018DE5F /* MainTabViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViews.swift; sourceTree = "<group>"; };
+		099A15A629FDCE28007882E6 /* EventSummaryCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventSummaryCard .swift"; sourceTree = "<group>"; };
+		099A15A829FE3E98007882E6 /* AddingCardsToCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingCardsToCart.swift; sourceTree = "<group>"; };
 		09B621F429BBB35C00ECFF5D /* TheMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09B621F729BBB35C00ECFF5D /* TheMoveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMoveApp.swift; sourceTree = "<group>"; };
 		09B621F929BBB35C00ECFF5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				093DF75A29F59B5E00396641 /* Photo.swift */,
+				093DF75C29F5CA7100396641 /* PhotoView.swift */,
 			);
 			path = "PhotoCreator ";
 			sourceTree = "<group>";
@@ -236,6 +243,15 @@
 			path = MVVM;
 			sourceTree = "<group>";
 		};
+		099A15A529FDCDE2007882E6 /* Card Compoents  */ = {
+			isa = PBXGroup;
+			children = (
+				099A15A629FDCE28007882E6 /* EventSummaryCard .swift */,
+				099A15A829FE3E98007882E6 /* AddingCardsToCart.swift */,
+			);
+			path = "Card Compoents ";
+			sourceTree = "<group>";
+		};
 		09B621EB29BBB35C00ECFF5D = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +261,7 @@
 				0970016329CBCD600005DAAE /* PaymentButton.swift */,
 				0970016529CBCDCA0005DAAE /* PaymentHandler.swift */,
 				09529D3D29C62E850050FEFB /* TabView.swift */,
+				099A15A529FDCDE2007882E6 /* Card Compoents  */,
 				0911AFE229C4461B00C18209 /* Event Creator */,
 				0970712929C4276C00C391E8 /* Ticket Creator */,
 				0911AFDF29C4451400C18209 /* CityCreator */,
@@ -436,14 +453,17 @@
 				09747ABF29BF835500DBE184 /* TicketDataServices.swift in Sources */,
 				09F28BCC29BF0BB700EE0671 /* EventsDataService.swift in Sources */,
 				0946A44029BF24B900A6E609 /* HomePageView.swift in Sources */,
+				093DF75D29F5CA7100396641 /* PhotoView.swift in Sources */,
 				09B6220629BBB37600ECFF5D /* EmptyTickets.swift in Sources */,
 				09FFC78329C25BC5009D3FC0 /* EventDetailView.swift in Sources */,
 				09FFC78129C25841009D3FC0 /* LocationMapPin.swift in Sources */,
 				09BFA4D729C4208B0079B3BC /* TicketRow.swift in Sources */,
 				09B621F829BBB35C00ECFF5D /* TheMoveApp.swift in Sources */,
+				099A15A929FE3E98007882E6 /* AddingCardsToCart.swift in Sources */,
 				09F28BC929BF0B2800EE0671 /* Event.swift in Sources */,
 				09F28BCF29BF1F8F00EE0671 /* ViewModel.swift in Sources */,
 				09D7F32329ED887300C0CC89 /* CityModel.swift in Sources */,
+				099A15A729FDCE28007882E6 /* EventSummaryCard .swift in Sources */,
 				09F9FC5029BFFE4A00E9033E /* CityData.swift in Sources */,
 				098B6DC029D60BA50018DE5F /* MainTabViews.swift in Sources */,
 				09B6220829BBCF6600ECFF5D /* TicketModel.swift in Sources */,

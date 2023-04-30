@@ -17,7 +17,6 @@ import FirebaseStorage
 struct EventPreviewCard: View {
     @EnvironmentObject private var vm : EventsViewModel
     var event: Event
-
     var body: some View {
             HStack(alignment: .bottom, spacing: 0) {
                 VStack(alignment: .leading, spacing: 16){
@@ -83,7 +82,7 @@ extension EventPreviewCard{
             }
         }
         .padding(6)
-        .background(Color.white)
+//        .background(Color.white)
         .cornerRadius(10)
         
         // use border tp outline the frame 

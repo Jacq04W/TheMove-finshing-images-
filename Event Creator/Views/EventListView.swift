@@ -50,6 +50,13 @@ extension EventListView{
                     .scaledToFill()
                     .frame(width: 45, height: 45)
                     .cornerRadius(10)
+            } else {
+                Image("sosa")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 45, height: 45)
+                    .cornerRadius(10)
+
             }
             VStack(alignment: .leading){
                 Text(event.name ?? "")
