@@ -34,7 +34,7 @@ class EventsViewModel : ObservableObject{
     
      var staticEvent : Event = Event( name: "Mike", category: "kickback", TType: "Party", location: "downtown", price: 20, description: "come turnuo with me", startDate: "7/11", organizerName: "Jacq", phoneNumber: "313-777-2222", images: [], address: "777 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date(), link:" ")
     
-     let defaultEvent = Event(images: [], address: "660 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date())
+    let defaultEvent = Event(name:"MIKe",organizerName: "",images: [], address: "660 Woodward", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date())
     /// current location on map ↓
     @Published var eventLocation: Event {
         /// everytime the map location is set update the map region so they match ↓
@@ -321,7 +321,7 @@ let event = Event(name: name, category: "", TType: "", location: "", description
                     
                     // need core location coordintes from fire base
                     let event =
-                    Event(images: [], address: "", coordinates: CLLocationCoordinate2D(latitude: lat, longitude: lon), holdCoords: self.newCoordinates, date: Date())
+                    Event(name:"",organizerName:"",images: [], address: "", coordinates: CLLocationCoordinate2D(latitude: lat, longitude: lon), holdCoords: self.newCoordinates, date: Date())
                     self.events.append(event)
                     
                 }

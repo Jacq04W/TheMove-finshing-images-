@@ -13,8 +13,10 @@ import MapKit
 // the details each location should have
 // this struct will be used for creating events so if we need to add more varibales on it to define it more thats fine 
 struct Event: Identifiable, Equatable{
-     var id: String?
-    var name: String?
+    var id: String {
+        name + organizerName
+    }
+    var name: String
     var category: String?
     var TType: String?
     var location: String?
@@ -23,7 +25,7 @@ struct Event: Identifiable, Equatable{
     var startDate: String?
     var startTime: String?
     var endTime: String?
-    var organizerName: String?
+    var organizerName: String
     var phoneNumber: String?
     var images: [UIImage]
     var imageURLString = ""

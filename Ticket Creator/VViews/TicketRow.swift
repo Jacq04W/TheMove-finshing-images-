@@ -57,7 +57,7 @@ struct TicketRow: View {
 
 struct TicketRow_Previews: PreviewProvider {
     static var previews: some View {
-        TicketRow(ticket: tickets[0], event: Event(images: [], address: "", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date()))
+        TicketRow(ticket: tickets[0], event: Event(name:"" ,organizerName:"",images: [], address: "", coordinates: CLLocationCoordinate2D(), holdCoords: [], date: Date()))
             .environmentObject(TicketsViewModel())
     }
 }

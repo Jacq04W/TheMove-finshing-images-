@@ -30,12 +30,12 @@ struct AddingCardsToCart: View {
                 
                 
                 HStack{
-                    // usin enum type to display whats getting show here
+                    //TODO: usin enum type to display whats getting show here
                     VStack(alignment: .center){
                         Text("General")
-                    .font(.system(size: 15))
-            Text("Admission")                    .font(.system(size: 15))
-
+                            .font(.system(size: 15))
+                        Text("Admission")
+                            .font(.system(size: 15))
                         Text("$50")
                             .font(.system(size: 40))
 
@@ -51,6 +51,7 @@ struct AddingCardsToCart: View {
                     
                 }
                 .padding()
+                .foregroundColor(Color("lsu"))
                 .background{
                     ZStack{
                         RoundedRectangle(cornerRadius: 21)
@@ -71,13 +72,10 @@ struct AddingCardsToCart: View {
                 Text("*All purchases are final")
                     .font(.system(size: 15))
                     .offset(y:-47)
-                
-                
-
             }
             .background{
                 RoundedRectangle(cornerRadius: 21)
-                    .fill (Color("purp"))
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color("purp"), Color("wok")]), startPoint: .topLeading, endPoint: .bottom) )
                     .frame(width: 376, height: 217)
             }
             

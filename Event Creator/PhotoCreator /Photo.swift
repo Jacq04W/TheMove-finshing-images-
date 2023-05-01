@@ -32,10 +32,7 @@ struct Photo : Identifiable, Codable {
 
 class PhotosViewModel: ObservableObject {
     func saveImage(event: Event,photo: Photo,image: UIImage) async -> Bool {
-        guard let eventID = event.id else {
-            print("🤬 ERRORS spot.id == nil")
-            return false
-        }
+         let eventID = event.id 
         
         let photoName = UUID().uuidString
         let storage = Storage.storage()
