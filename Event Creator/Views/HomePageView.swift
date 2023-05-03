@@ -25,8 +25,8 @@ struct HomePageView: View {
                  eventPreviewCard
             }
 //            .task {
-//                vm.fetchdata()
-//            }
+//                            vm.fetchdata()
+//                        }
             .refreshable {
                 vm.refreshdata()
             }

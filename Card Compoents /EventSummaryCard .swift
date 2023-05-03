@@ -24,10 +24,9 @@ struct EventSummaryCard: View {
             Image("sosa")
                 .resizable()
                 .scaledToFill()
-                .frame(width: 333, height: 113)
-                .cornerRadius(10)
-                .offset(y:-19)
-
+                .frame(width: 350, height: 113)
+                .cornerRadius(21)
+                .offset(y:-20)
     
             HStack{
                 VStack{
@@ -39,15 +38,14 @@ struct EventSummaryCard: View {
                         Image(systemName: "calendar")
                         Text(event.startDate ?? "")
                         Text("✘12:00 PM")
-                        
-                    }                        .font(.system(size: 25))
+                    }
+                    .font(.system(size: 25))
 
                     HStack(spacing:1){
                         Image(systemName: "mappin")
                             .foregroundColor(.gray)
                         Text(event.address ?? "")
-                     
-                    }                        .font(.system(size: 25))
+                    } .font(.system(size: 25))
                         .offset(y:13)
 
                     .padding(.trailing,10)
@@ -61,16 +59,44 @@ struct EventSummaryCard: View {
             }
             .padding()
             .background{
-                RoundedRectangle(cornerRadius: 10)
-                .fill (.red)
-                .frame(width: 333, height: 125)
+                ZStack{
+                    RoundedRectangle(cornerRadius: 21)
+                        .stroke(Color(red: 0.545, green: 0.545, blue: 0.588))
+                        .frame(width: 350, height: 100)
+                        .offset(y:-14)
+                    
+                    
+                    RoundedRectangle(cornerRadius: 21)
+                        .frame(width: 350, height: 100)
+                        .offset(y:-14)
+//                        .fill(.ultra )
+
+                    
+                }
+//                
+//                RoundedRectangle(cornerRadius: 10)
+//                .fill (.red)
+//                .frame(width: 333, height: 125)
             }
             .offset(y:15)
         }
         .background{
+//            RoundedRectangle(cornerRadius: 21)
+//            .fill (.blue)
+//            .frame(width: 370, height: 303)
+            
+            
             RoundedRectangle(cornerRadius: 21)
-            .fill (.blue)
-            .frame(width: 370, height: 303)
+                .fill(LinearGradient(gradient: Gradient(colors: [Color("purp"), Color("wok")]), startPoint: .topLeading, endPoint: .bottom) )
+                .frame(width: 376, height: 217)
+            
+            
+            
+            
+            
+            
+            
+            
           }
         .overlay{
             Button{

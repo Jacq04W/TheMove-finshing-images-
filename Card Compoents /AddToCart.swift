@@ -17,12 +17,13 @@ import FirebaseStorage
 struct AddToCart: View {
     @EnvironmentObject private var vm : EventsViewModel
     var body: some View {
-        VStack{
-            ForEach(vm.events,id:\.id){ event in
-                AddingCardsToCart(event: event)
+        ScrollView{
+            VStack{
+                ForEach(vm.events,id:\.id){ event in
+                    AddingCardsToCart(event: event)
+                }
             }
         }
-        
     }
 }
 
