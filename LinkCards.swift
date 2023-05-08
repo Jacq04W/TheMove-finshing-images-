@@ -12,7 +12,7 @@ struct LinkCards: View {
 
     var body: some View {
         
-        if let url = URL(string: event.link ?? ""){
+        if let url = URL(string: event.link ?? "ff"){
             Link("wiki",destination: url)
                 
                 .font(.headline)

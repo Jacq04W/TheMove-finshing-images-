@@ -46,30 +46,34 @@ struct EventSummaryCard: View {
                             .foregroundColor(.gray)
                         Text(event.address ?? "")
                     } .font(.system(size: 25))
-                        .offset(y:13)
+//                        .offset(y:13)
 
                     .padding(.trailing,10)
                 }
                 .overlay(
                     Text("$50")
             .font(.system(size: 25))
-            .offset(x:135,y:40)
+            .offset(x:140,y:30)
             .bold()
 )
-            }
+            }            .offset(y:-20)
+
             .padding()
             .background{
                 ZStack{
                     RoundedRectangle(cornerRadius: 21)
                         .stroke(Color(red: 0.545, green: 0.545, blue: 0.588))
                         .frame(width: 350, height: 100)
-                        .offset(y:-14)
+                        .offset(y:-25)
                     
                     
                     RoundedRectangle(cornerRadius: 21)
+                        .fill(.ultraThinMaterial )
                         .frame(width: 350, height: 100)
-                        .offset(y:-14)
-//                        .fill(.ultra )
+                        
+
+                        .offset(y:-25)
+                    
 
                     
                 }
