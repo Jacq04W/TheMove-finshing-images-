@@ -18,7 +18,7 @@ struct AddingCardsToCart: View {
     @State var ticketCount = 0
     var body: some View {
         VStack {
-            VStack{
+            VStack{ 
                 // maybe a multitude of pics
                 // TODO: this should be event.coverPhoto
                 Image("sosa")

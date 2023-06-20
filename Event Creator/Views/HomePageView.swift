@@ -55,7 +55,7 @@ struct HomePageView: View {
             Button{
                 vm.showLocationsList.toggle()
             }
-            label :{
+            label:{
                 Image(systemName:"list.bullet.indent")
                     .font(.title2)
                     .fontWeight (.bold)
