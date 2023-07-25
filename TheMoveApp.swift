@@ -16,19 +16,19 @@ struct TheMoveApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            Test()
-//            TabView{
-//                HomePageView()
-//                    .tabItem {
-//            Label("house.fill",systemImage: "house")
-//                    }
-//
-//                AddStore()
-//            .tabItem {
-//            Label("add event",systemImage: "plus")
-//                    }
-//
-//            } .environmentObject(CitiesViewModel())
+//            Test()
+            TabView{
+                HomePageView()
+                    .tabItem {
+            Label("house.fill",systemImage: "house")
+                    }
+
+                AddStore()
+            .tabItem {
+            Label("add event",systemImage: "plus")
+                    }
+
+            } .environmentObject(CitiesViewModel())
                 .environmentObject(EventsViewModel())
             
         }
